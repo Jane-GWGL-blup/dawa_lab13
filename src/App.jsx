@@ -1,6 +1,6 @@
 
 import theme from './theme'
-import DropDown from './components/DropDown/dropdown'
+import DropDown from './components/DropDown'
 import { ThemeProvider  } from '@mui/material/styles'
 import { Container, Button, Typography, FormControl ,InputLabel, Select, MenuItem  } from "@mui/material"
 
