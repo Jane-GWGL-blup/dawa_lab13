@@ -1,47 +1,29 @@
-import { useState, useEffect } from 'react';
-import {Box, InputLabel, MenuItem , FormControl, Select} from '@mui/material';
+import {
+  Box,
+  InputLabel,
+  FormControl,
+  MenuItem,
+  Typography,
+  Select,
+} from "@mui/material";
 
-
-export default function DropDown() {
-  const [pokemon, setPokemon] = useState('');
-  const [types, setType] = useState([]);
-
-  const handleChange = (event) => {
-    setType(event.target.value);
-  };
-
-  
-  async function getTypes(){
-    let url='https://pokeapi.co/api/v2/type'
-    const response = fetch(url)
-    .then((res)=> {
-      console.log(res)
-    })
-    .then((json)=>{
-      setType((json.results))
-    })
-    const data = response.json
-    console.log(data)
-  }
-  useEffect(()=>{
-    getTypes();
-  },[]);
-
+const DropDown = ({ type, handleChange, types }) => {
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box mt={5}>
+      <Typography variant="h4" mb={3}>
+        Tipo de pokemones
+      </Typography>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Pokemon</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={pokemon}
-          label="Age"
-          onChange={handleChange}
-        >
-          
-          <MenuItem value=""></MenuItem>
+        <InputLabel>Tipos</InputLabel>
+        <Select value={type} label="Tipos" onChange={handleChange}>
+          {types.length > 0 &&
+            types.map(({ url, name }) => (
+              <MenuItem value={url}>{name}</MenuItem>
+            ))}
         </Select>
       </FormControl>
     </Box>
   );
-}
+};
+
+export default DropDown;
