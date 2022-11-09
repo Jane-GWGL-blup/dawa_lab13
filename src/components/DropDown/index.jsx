@@ -11,7 +11,7 @@ const DropDown = ({ type, handleChange, types }) => {
   return (
     <Box mt={5}>
       <Typography variant="h4" mb={3}>
-        Tipo de pokemones
+      <img class="gif" src="pokegif2.gif"/>Tipo de pokemones<img class="gif" src="pokegif2.gif"/>
       </Typography>
       <FormControl fullWidth>
         <InputLabel>Tipos</InputLabel>
