@@ -61,6 +61,7 @@ background: linear-gradient(90deg, rgba(254,255,0,0.8776552857471114) 0%, rgba(2
 
 }
 
+/* Configuration gifs*/
 .gif{
   width: 15%;
 }
@@ -79,6 +80,13 @@ footer{
   font-weight: bold;
 }
 
+/* Text */
+
 .text-center{
   text-align: center;
+}
+
+.h4{
+  font-size: 2.9vw;
+  font-weight: bold;
 }
