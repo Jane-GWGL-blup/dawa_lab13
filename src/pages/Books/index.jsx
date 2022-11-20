@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { CardBooks } from "../../components";
-import { Card, CardContent, Container, Box, Button, TextField } from "@mui/material"
+import { CardBooks, FooterBook, HeaderBook } from "../../components";
+import { Card, CardContent, Container, Box, Button, TextField, Grid } from "@mui/material"
 import { searchBooks } from "../../services";
 
 const Books = () => {
@@ -23,11 +23,14 @@ const Books = () => {
     }
    
     return(
-        <Container maxWidth="md">
-            <Box my={4}>
+        <Container class="container-book" maxWidth="md">
+            <HeaderBook/>
+            <img  class="book-gif2" src="book-gif2.gif"/>
+            <Box class="box-book" my={4}>
                 <Card>
-                    <CardContent>
-                        <Box sx={{
+                    <CardContent class="cardContent-book">
+                        <Box    
+                             sx={{
                             display: "flex",
                             gap: 3,
                             alignItems: "center",
@@ -49,8 +52,13 @@ const Books = () => {
                     </CardContent>
                 </Card>
             </Box>
-            {books.length > 0 &&
-            books.map((book, index) =>  <CardBooks key={index} book={book} />)}
+            <Container maxWidth="xl">
+                <Grid container spacing={3}>
+                    {books.length > 0 &&
+                books.map((book, index) => <Grid  xs={12} sm={4} sx={{padding:2}}> <CardBooks key={index} book={book} /></Grid>)}
+                </Grid>         
+            <FooterBook/>
+            </Container>
         </Container>
     )
 }
