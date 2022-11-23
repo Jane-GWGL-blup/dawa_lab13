@@ -7,20 +7,24 @@ import { Paper, Box, Card, CardContent, CardMedia, Grid, Typography } from "@mui
         <Grid >
           <Grid >
             <Card class="card-books">
-                <CardMedia
-                  class="cardMedia-book"
-                  component="img"
-                  image={book.volumeInfo?.imageLinks?.thumbnail}
-                  height={300}
-                />
-                <CardContent>
-                  <Box>
-                    <Typography variant="h7">{book.volumeInfo.title}</Typography>
-                  </Box>
-                  <img  class="book-gif" src="book-gif1.gif"/>
-                  <p>{book.volumeInfo.description}</p>
-                </CardContent>
-             
+              <CardMedia
+                sx={{ flex: '1 0 auto' }}
+                class="cardMedia-book"
+                component="img"
+                image={book.volumeInfo?.imageLinks?.thumbnail}
+                height={300}
+              /> 
+              <CardContent>
+                <div id="global">
+                    <Box>
+                      <img  class="book-gif" src="book-gif1.gif"/><br/>
+                      <Typography variant="h6">{book.volumeInfo.title}</Typography><br/>
+                    </Box>
+                    <Box>
+                      <p>{book.volumeInfo.description}</p>
+                    </Box>
+                </div>
+              </CardContent>
             </Card>
           </Grid>
         </Grid>

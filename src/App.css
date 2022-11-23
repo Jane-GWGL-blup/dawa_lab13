@@ -49,17 +49,23 @@ background: linear-gradient(90deg, rgba(254,255,0,0.8776552857471114) 0%, rgba(2
 }
 
 .card-books{
-  border-radius: 5px;
-  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
   border-color: black;
+  background-color: white;
+ 
 }
 
 .cardMedia{
   width: 100%;
   padding: 3%;
+  
 }
 
 .cardMedia-book{
+  /*background-color: rgb(128, 77, 22);*/
+  background-image: url("book-bg.jpg");
+  background-repeat: no-repeat;
+  border-radius: 10px;
   width: 100%;
   padding: 5%;
 }
@@ -72,6 +78,8 @@ background: linear-gradient(90deg, rgba(254,255,0,0.8776552857471114) 0%, rgba(2
 }
 .cardContent-book{
   padding: 0 3% 0 3%;
+  
+  
 }
 
 .read-the-docs {
@@ -106,6 +114,7 @@ background: linear-gradient(90deg, rgba(254,255,0,0.8776552857471114) 0%, rgba(2
 /*Header*/
 .header-book{
   background-color: rgb(92, 56, 23);
+  top: 0;
 }
 
 .AppBar{
@@ -140,4 +149,28 @@ background: linear-gradient(0deg, rgba(145,72,31,1) 0%, rgba(230,204,75,1) 51%, 
 .h4{
   font-size: 2.9vw;
   font-weight: bold;
+}
+
+/* scroll */
+#global{
+  height: 250px;
+  overflow-y: scroll;
+}
+
+#global::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#global::-webkit-scrollbar:vertical {
+  width:9px;
+}
+#global::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.hr-book{
+  border: 3px solid #780404a1;
+  margin-bottom: 2%;
 }

@@ -52,10 +52,11 @@ const Books = () => {
                     </CardContent>
                 </Card>
             </Box>
+            <hr class="hr-book"/>
             <Container maxWidth="xl">
                 <Grid container spacing={3}>
                     {books.length > 0 &&
-                books.map((book, index) => <Grid  xs={12} sm={4} sx={{padding:2}}> <CardBooks key={index} book={book} /></Grid>)}
+                books.map((book, index) => <Grid  xs={12} sm={3} sx={{padding:2}}> <CardBooks key={index} book={book} /></Grid>)}
                 </Grid>         
             <FooterBook/>
             </Container>
